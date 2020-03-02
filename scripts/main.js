@@ -87,10 +87,9 @@ window.onclick = function(event) {
 window.onscroll = function() {
   var scrollPos = window.pageYOffset;
   var navbar = document.getElementById('navbar');
-  var line = document.getElementById('frameLine');
   if (scrollPos >= 20) {
     line.style.display = "block";
-    navbar.style.backgroundColor = "rgba(8,15,23,0.8)"
+    navbar.style.backgroundColor = "rgba(25,10,8,0.8)"
   } else {
     line.style.display = "none";
     navbar.style.backgroundColor = ""

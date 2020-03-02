@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
-  background-color: #0a141f;
-  background: url(../graphics/background2.jpg) no-repeat center center fixed;
+  background-color: #F6D8AE;
+  background-image: url(../graphics/woodBackgroundDark.jpg);
   height: 100%;
   background-size: cover;
   -webkit-background-size: cover;
@@ -9,16 +9,8 @@ html {
   -o-background-size: cover;
 }
 
-.de:lang(en) {
-  display: none;
-}
-
-.en:lang(de) {
-  display: none;
-}
-
 @font-face {
-    font-family: 'Dosis';
+    font-family: 'Yanone Kaffeesatz';
     src: url('../fonts/dosis-variablefont_wght-webfont.woff2') format('woff2'),
          url('../fonts/dosis-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
@@ -26,13 +18,14 @@ html {
 }
 
 body {
+  max-width: 1500px;
   display: flex;
   flex-flow: row wrap;
   margin: 0 auto;
-  font-family: 'Dosis';
+  font-family: 'Yanone Kaffeesatz';
   font-size: 15px;
   letter-spacing: 1px;
-  font-weight: 200;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -53,8 +46,8 @@ h4,
 li,
 p,
 a {
-  color: #fdfffc;
-  font-family: 'Dosis';
+  color: #f06543;
+  font-family: 'Yanone Kaffeesatz';
 }
 
 h2 {
@@ -64,7 +57,7 @@ h2 {
 .button {
   text-align: center;
   text-decoration: none;
-  font-family: 'Dosis';
+  font-family: 'Yanone Kaffeesatz';
   transition: all 0.3s ease-in-out;
   font-size: 15px;
   cursor: pointer;
@@ -116,33 +109,22 @@ h2 {
 #navbar {
   z-index: 10;
   display: flex;
-  width: 100%;
-  height: auto;
-  margin-right: auto;
-  margin-left: auto;
-  overflow: hidden;
+  width: 20%;
+  height: 120px;
   flex-flow: wrap;
   justify-content: flex-end;
-}
-
-.menuPicture {
-  margin: auto auto auto 15px;
-  width: 40px;
-  height: 30px;
-  background-image: url(../graphics/SchriftzugKleinWeiß.svg);
+  margin-top: 200px;
 }
 
 .sticky {
   position: sticky;
   top: 0;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .linkTo,
 .start {
-  width: 15vw;
+  width: 100%;
+  height: 30px;
   min-width: 100px;
   max-width: 180px;
   margin: 10px;
@@ -152,23 +134,22 @@ h2 {
 }
 
 .linkTo {
-  color: #fdfffc;
+  color: #70A9A1;
 }
 
 .start {
-  color: white;
-  border-color: #ffd8ad;
-  border-style: solid;
-  border-width: 1.5px;
+  border: 2px solid #70A9A1;
+  color: #70A9A1;
 }
 
 .linkTo:hover {
-  background-color: #0a141f;
+  background-color: #70A9A1;
+  color: #050505;
 }
 
 .start:hover {
-  background-color: #ffd8ad;
-  color: black;
+  background-color: #70A9A1;
+  color: #050505;
 }
 
 .responsiveMenu {
@@ -217,20 +198,6 @@ h2 {
   display: flex;
 }
 
-.frameLine {
-  width: 100%;
-  height: 1px;
-  background-color: #080f17;
-  display: none;
-}
-
-.lineWhite {
-  width: 66%;
-  height: 1px;
-  float: right;
-  background-color: #fdfffc;
-}
-
 @media all and (max-width: 1300px) {
   .linkTo,
   .start {
@@ -241,6 +208,10 @@ h2 {
 }
 
 @media all and (max-width: 620px) {
+  #navbar {
+    width: 100%;
+  }
+
   .linkTo,
   .start {
     display: none;
@@ -252,121 +223,25 @@ h2 {
     height: auto;
     flex-direction: column;
   }
-  
+
   .menuPicture {
     display: none;
   }
 }
 
-/* select language*/
-
-.switchFrame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  margin: 10px;
-  width: 50px;
-  height: 23px;
-}
-
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 23px;
-  border-style: solid;
-  border-color: #ffd8ad;
-  border-width: 1.5px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 3px;
-  bottom: 2px;
-  background-color: #fdfffc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(25px);
-  -ms-transform: translateX(25px);
-  transform: translateX(25px);
-}
-
 /* header */
 
-.header {
-  padding: 100px 0px;
-  min-height: 70vh;
-  height: max-content;
-  width: 100%;
-  overflow: hidden;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .headerPictureFrame {
-  width: 100%;
-  margin-top: 5vh;
-  margin-bottom: 10vh;
-  height: 30vw;
-  max-height: 20vh;
-  background-image: url(../graphics/ErikBentStraightSlim.svg);
-}
-
-.headerText {
-  padding: 1%;
-  text-align: center;
-  font-size: 30px;
-  letter-spacing: 20px;
-  font-weight: 200;
-}
-
-.headerTextSlim {
-  display: none;
-  padding: 1%;
-  text-align: center;
-  font-size: 30px;
-  letter-spacing: 20px;
-  font-weight: 200;
-}
-
-.scrollToAboutMe {
-  font-size: 20px;
-  padding: 10px 80px;
-  color: #080f17;
-  background-color: #ffd8ad;
-  border-radius: 50px;
-}
-
-.scrollToAboutMe:hover {
-  background-color: #154848;
-  color: #fdfffc;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background-image: url(../graphics/TitleLogo.svg);
 }
 
 @media all and (max-width: 620px) {
-  .header {
-    padding: 20px 0;
+  .headerPictureFrame {
+    width: 100%
   }
 
   .headerTextSlim {
@@ -403,9 +278,9 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 80vh;
-  padding: 50px 17%;
+  padding: 5px 20%;
   overflow: hidden;
+  background-color: rgb(5,5,5, 0.5);
 }
 
 .contentSite {
@@ -413,7 +288,7 @@ input:checked + .slider:before {
   width: 100%;
   min-height: 70vh;
   height: max-content;
-  padding: 50px 17%;
+  padding: 5px 20%;
   overflow: hidden;
 }
 
@@ -426,14 +301,40 @@ input:checked + .slider:before {
 }
 
 .withBackgroundColor {
-  background: rgba(8,15,23,0.8);
+  /*background: rgb(25,10,8,0.8);*/
+}
+
+.pictures {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  height: max-content;
+}
+
+.bannerAboutMe {
+  margin-top: 50px;
+  width: 100vw;
+  height: 6vw;
+  font-size: 20px;
+  color: #190a08;
+  background-image: url(../graphics/BannerAboutMe.svg);
+  text-align: center;
+}
+
+.bannerPrices {
+  margin-top: 50px;
+  width: 100%;
+  height: 6vw;
+  font-size: 20px;
+  color: #190a08;
+  background-image: url(../graphics/BannerPrices.svg);
+  text-align: center;
 }
 
 .contentPicture {
-  height: 100%;
-  display: block;
-  flex-flow: column wrap;
-  margin: 20px;
+  display: flex;
+  margin: 5px;
 }
 
 .contentText {
@@ -444,42 +345,26 @@ input:checked + .slider:before {
 }
 
 .aboutMeText,
-.skidCatText {
-  width: 60%;
+.priceText {
+  width: 100%;
 }
 
-.bearText {
-  width: 40%;
-}
-
-#aboutMePicture {
+.picture1 {
   background-image: url(../graphics/aboutMePicture.jpg);
-  min-height: 400px;
-  width: 30%;
+  height: 300px;
+  width: 48%;
 }
 
-#skidCatPicture {
-  background-image: url(../graphics/skidCatPicture.jpg);
-  min-height: 500px;
-  max-height: 700px;
-  width: 30%;
+.picture2 {
+  background-image: url(../graphics/Friseur.jpg);
+  height: 300px;
+  width: 48%;
 }
 
-#skidCatPicture,
-#bearPicture {
-  filter: grayscale(1);
-  transition: all .6s ease;
-}
-
-#skidCatPicture:hover,
-#bearPicture:hover {
-  filter: none;
-}
-
-#bearPicture {
-  background-image: url(../graphics/bearPicture.jpg);
-  min-height: 300px;
-  width: 50%;
+.picture3 {
+  background-image: url(../graphics/FriseurGeraete.jpg);
+  height: 300px;
+  width: 48%;
 }
 
 .contact {
@@ -517,9 +402,9 @@ input:checked + .slider:before {
 .submit {
   background-color: rgba(0,0,0,0);
   padding: 5px 10px;
-  border: 1px solid #fdfffc;
+  border: 2px solid #70A9A1;
   border-radius: 5px;
-  font-family: 'Dosis';
+  font-family: 'Yanone Kaffeesatz';
   font-size: 20px;
   font-weight: 500;
   color: #fdfffc;
@@ -543,16 +428,14 @@ input:checked + .slider:before {
   height: 45px;
   float: right;
   margin: 10px 0px;
-  color: white;
-  border-style: solid;
-  border-width: 1.5px;
-  border-color: #ffd8ad;
+  color: #70A9A1;
+  border: 2px solid #70A9A1;
   border-radius: 45px;
 }
 
 .submit:hover {
-  background: #ffd8ad;
-  color: black;
+  background: #70A9A1;
+  color: #050505;
 }
 
 .returnMsg {
@@ -560,10 +443,6 @@ input:checked + .slider:before {
 }
 
 @media all and (max-width: 1500px) {
-  .content {
-    padding: 50px 5%;
-  }
-
   .emailFrame,
   .nameFrame {
     width: 47%;
@@ -593,7 +472,7 @@ input:checked + .slider:before {
   }
 }
 
-@media all and (max-width: 880px) {
+/* @media all and (max-width: 880px) {
   #aboutMeText,
   #skidCatText,
   #bearText,
@@ -614,7 +493,7 @@ input:checked + .slider:before {
     margin-right: auto;
     margin-left: auto;
   }
-}
+} */
 
 /* footer */
 
@@ -650,7 +529,7 @@ input:checked + .slider:before {
 .footerCopyright {
   width: 100%;
   color: white;
-  background-color: rgba(8,15,23,0.8);
+  background-color: #70A9A1;
   text-align: center;
   font-size: 14px;
 }
@@ -665,7 +544,7 @@ input:checked + .slider:before {
   color: #fdfffc;
   background: #080f17;
   text-align: center;
-  font-family: 'Dosis';
+  font-family: 'Yanone Kaffeesatz';
   font-size: 16px;
   line-height: 25px;
 }
