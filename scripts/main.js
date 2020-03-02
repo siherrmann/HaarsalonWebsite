@@ -36,36 +36,6 @@
 
 })(jQuery);
 
-function cookieOk() {
-  var now = new Date();
-  var lifetime = now.getTime(); // Variable für Millisekunden seit 1970 bis aktuelles Datum
-  var deleteCookie = lifetime + 2592000000; // Macht den Cookie 30 Tage gültig.
-
-  now.setTime(deleteCookie);
-  var enddate = now.toUTCString();
-
-  document.cookie =
-    "cookiesAccepted = set; path=/; secure; expires=" + enddate;
-  document.getElementById("cookiePopup").style.display = "none";
-}
-
-function languageSet() {
-  if (document.getElementById("switchLanguage").checked){
-    document.documentElement.lang = "de"
-    var now = new Date();
-    var lifetime = now.getTime(); // Variable für Millisekunden seit 1970 bis aktuelles Datum
-    var deleteCookie = lifetime + 2592000000; // Macht den Cookie 30 Tage gültig.
-
-    now.setTime(deleteCookie);
-    var enddate = now.toUTCString();
-
-    document.cookie =
-      "languageSet = set; path=/; secure; expires=" + enddate;
-  } else {
-    document.documentElement.lang = "en"
-  }
-}
-
 function dropMenu() {
   document.getElementById("droppedMenuContent").classList.toggle("drop");
 }
