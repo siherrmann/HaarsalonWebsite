@@ -522,6 +522,7 @@ h2 {
   width: 280px;
   margin: 10px 20px;
   flex-direction: column;
+  height: 230px;
 }
 
 .footerPicture {
@@ -537,6 +538,9 @@ h2 {
   width: 100%;
   padding-bottom: 10px;
   text-align: center;
+}
+
+.footerTextColor {
   color: #f06543;
 }
 
