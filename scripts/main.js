@@ -58,10 +58,8 @@ window.onscroll = function() {
   var scrollPos = window.pageYOffset;
   var navbar = document.getElementById('navbar');
   if (scrollPos >= 20) {
-    line.style.display = "block";
-    navbar.style.backgroundColor = "rgba(25,10,8,0.8)"
+    navbar.style.backgroundColor = "rgb(5,5,5, 0.7)"
   } else {
-    line.style.display = "none";
     navbar.style.backgroundColor = ""
   }
 };

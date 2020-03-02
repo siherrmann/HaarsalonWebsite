@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
   background-color: #F6D8AE;
-  background-image: url(../graphics/woodBackgroundDark.jpg);
+  background-image: url(../graphics/woodBackgroundDarkMin.jpg);
   height: 100%;
   background-size: cover;
   -webkit-background-size: cover;
@@ -105,7 +105,7 @@ h2 {
 
 /* navbar */
 
-#navbar {
+#navbarSide {
   z-index: 10;
   display: flex;
   flex-flow: column;
@@ -115,6 +115,10 @@ h2 {
   margin-top: 25vh;
 }
 
+#navbar {
+  display: none;
+}
+
 .sticky {
   position: sticky;
   top: 0;
@@ -122,10 +126,8 @@ h2 {
 
 .linkTo,
 .start {
-  width: 100%;
+  width: 180px;
   height: 30px;
-  min-width: 100px;
-  max-width: 180px;
   margin: 10px;
   padding: 5px 10px 7px 10px;
   border-radius: 30px;
@@ -158,18 +160,16 @@ h2 {
 .dropMenu {
   margin: 1%;
   padding: 10px 10px 12px 10px;
-  background-color: #ffd8ad;
+  background-color: #70A9A1;
   text-decoration: none;
   border-radius: 40px;
-  border-color: #ffd8ad;
-  border-style: solid;
-  border-width: 1.5px;
-  color: black;
+  border: 2px solid #70A9A1;
+  color: #050505;
 }
 
 .dropMenu:hover {
-  color: white;
-  background-color: #0a141f;
+  color: #70A9A1;
+  background-color: #050505;
 }
 
 .menuContent {
@@ -185,12 +185,13 @@ h2 {
   margin: 2px 1%;
   padding: 12px 0px;
   border-radius: 40px;
-  background-color: #080f17;
+  background-color: #050505;
   text-decoration: none;
 }
 
 .droppedLink:hover {
-  background-color: #0a141f;
+  background-color: #70A9A1;
+  color: #050505;
 }
 
 .drop {
@@ -198,10 +199,33 @@ h2 {
 }
 
 @media all and (max-width: 1300px) {
+  #navbarSide {
+    display: none;
+  }
+
+  #navbar {
+    z-index: 10;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 0vh;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .linkTo,
   .start {
     width: 14vw;
-    min-width: 100px;
+    min-width: 180px;
     margin: 1vw;
   }
 }
@@ -246,33 +270,30 @@ h2 {
 
 @media all and (max-width: 620px) {
   .headerPictureFrame {
-    width: 100%
-  }
-
-  .headerTextSlim {
-    font-size: 30px;
-    letter-spacing: 15px;
-  }
-
-  .scrollToAboutMe {
     width: 100%;
-    margin: 0px;
-    padding: 15px 0;
+    height: 10vh;
   }
 
   .headerPicture {
-    width: 100%;
-    height: 40vw;
+    padding: 40%;
+    height: 100%;
   }
 }
 
-@media all and (max-width: 1400px) {
-  .headerText {
-    display: none;
+@media all and (max-width: 1300px) {
+  .headerPictureFrame {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
   }
 
-  .headerTextSlim {
-    display: block;
+  .headerPicture {
+    margin: 5%;
+    height: 100%;
+    padding: 40%;
+    background-image: url(../graphics/TitleLogo.svg);
   }
 }
 
@@ -285,7 +306,7 @@ h2 {
   width: 100%;
   padding: 5vh 20%;
   overflow: hidden;
-  background-color: rgb(5,5,5, 0.5);
+  background-color: rgb(5,5,5, 0.7);
 }
 
 .contentSite {
@@ -320,23 +341,17 @@ h2 {
 .bannerAboutMe {
   margin: 5vh;
   width: 100vw;
-  height: 6vw;
+  height: 6vh;
   max-height: 80px;
-  font-size: 20px;
-  color: #190a08;
   background-image: url(../graphics/BannerAboutMe.svg);
-  text-align: center;
 }
 
 .bannerPrices {
   margin: 5vh;
   width: 100%;
-  height: 6vw;
+  height: 6vh;
   max-height: 80px;
-  font-size: 20px;
-  color: #190a08;
   background-image: url(../graphics/BannerPrices.svg);
-  text-align: center;
 }
 
 .contentPicture {
@@ -467,6 +482,14 @@ h2 {
 }
 
 @media all and (max-width: 1000px) {
+  .bannerAboutMe {
+    margin: 2vh;
+  }
+
+  .bannerPrices {
+    margin: 2vh;
+  }
+
   .contentText,
   .contentPicture {
     width: 100%
