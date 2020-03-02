@@ -45,7 +45,7 @@ h4,
 li,
 p,
 a {
-  color: #f06543;
+  color: #f6d8ae;
   font-family: 'Yanone Kaffeesatz';
 }
 
@@ -399,6 +399,10 @@ h2 {
   margin: 10px 0px;
 }
 
+.label {
+  color: #f06543;
+}
+
 .pot {
   display: none;
 }
@@ -480,7 +484,7 @@ h2 {
   }
 }
 
-/* @media all and (max-width: 880px) {
+@media all and (max-width: 880px) {
   #aboutMeText,
   #skidCatText,
   #bearText,
@@ -501,7 +505,7 @@ h2 {
     margin-right: auto;
     margin-left: auto;
   }
-} */
+}
 
 /* footer */
 
@@ -532,6 +536,7 @@ h2 {
   width: 100%;
   padding-bottom: 10px;
   text-align: center;
+  color: #f06543;
 }
 
 .footerCopyright {
@@ -540,38 +545,6 @@ h2 {
   background-color: #70A9A1;
   text-align: center;
   font-size: 14px;
-}
-
-#cookiePopup {
-  z-index: 100;
-  position: fixed;
-  bottom: 0px;
-  left: 0;
-  width: 250px;
-  padding: 20px;
-  color: #fdfffc;
-  background: #080f17;
-  text-align: center;
-  font-family: 'Yanone Kaffeesatz';
-  font-size: 16px;
-  line-height: 25px;
-}
-
-.cookieButton {
-  width: 230px;
-  height: 50px;
-  padding: 5px 60px;
-  border-radius: 50px;
-  font-size: 20px;
-  color: #fdfffc;
-  background-color: #124559;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.cookieButton:hover {
-  background-color: #154848;
-  color: white;
 }
 
 @media all and (max-width: 880px) {
