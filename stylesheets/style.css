@@ -18,7 +18,6 @@ html {
 }
 
 body {
-  max-width: 1500px;
   display: flex;
   flex-flow: row wrap;
   margin: 0 auto;
@@ -109,11 +108,11 @@ h2 {
 #navbar {
   z-index: 10;
   display: flex;
+  flex-flow: column;
   width: 20%;
-  height: 120px;
-  flex-flow: wrap;
-  justify-content: flex-end;
-  margin-top: 200px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 25vh;
 }
 
 .sticky {
@@ -235,7 +234,13 @@ h2 {
   width: 80%;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 100vh;
+}
+
+.headerPicture {
+  margin-right: 20%;
+  height: 100%;
+  padding: 20%;
   background-image: url(../graphics/TitleLogo.svg);
 }
 
@@ -278,7 +283,8 @@ h2 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 5px 20%;
+  max-width: 1000px;
+  padding: 5vh 20%;
   overflow: hidden;
   background-color: rgb(5,5,5, 0.5);
 }
@@ -313,7 +319,7 @@ h2 {
 }
 
 .bannerAboutMe {
-  margin-top: 50px;
+  margin: 5vh;
   width: 100vw;
   height: 6vw;
   max-height: 80px;
@@ -324,7 +330,7 @@ h2 {
 }
 
 .bannerPrices {
-  margin-top: 50px;
+  margin: 5vh;
   width: 100%;
   height: 6vw;
   max-height: 80px;
