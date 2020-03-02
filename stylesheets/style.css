@@ -283,7 +283,6 @@ h2 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 1000px;
   padding: 5vh 20%;
   overflow: hidden;
   background-color: rgb(5,5,5, 0.5);
