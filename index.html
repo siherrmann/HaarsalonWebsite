@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- color scheme: https://coolors.co/080f17-0a141f-fdfffc-70a9a1-40798c -->
+  <!-- color scheme: https://coolors.co/080f17-0a141f-fdfffc-84dccf-d62828 -->
+  <!-- https://coolors.co/0a141f-fdfffc-7f7783-ffd8ad-a63d40 -->
+  <!-- new color scheme https://coolors.co/080f17-ad343e-fdfffc-ffd8ad-124559 -->
+
+  <head>
+    <title>Erik Bent</title>
+    <meta name="description" content="Erik Bent" />
+    <meta name="keywords" content="erik, bent, design, marketing, app, skidcat, game"/>
+    <meta name="author" content="Simon Herrmann" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/graphics/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/graphics/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/graphics/favicon-16x16.png">
+    <link rel="manifest" href="/graphics/site.webmanifest">
+    <link rel="mask-icon" href="/graphics/safari-pinned-tab.svg" color="#080f17">
+    <link rel="shortcut icon" href="/graphics/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/graphics/browserconfig.xml">
+    <meta name="theme-color" content="#080f17">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  </head>
+
+  <body>
+    <div class="frame sticky" id="navbar">
+      <div class="menuPicture picture"></div>
+      <a class="linkTo button en" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
+      <a class="linkTo button en" href="#skidCat" onfocus="this.blur()">PROJECTS</a>
+      <a class="linkTo button en" href="#contact" onfocus="this.blur()">CONTACT</a>
+      <a class="start button en" href="#start" onfocus="this.blur()">START</a>
+      <a class="linkTo button de" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
+      <a class="linkTo button de" href="#skidCat" onfocus="this.blur()">PROJEKTE</a>
+      <a class="linkTo button de" href="#contact" onfocus="this.blur()">KONTAKT</a>
+      <a class="start button de" href="#start" onfocus="this.blur()">START</a>
+      <div class="responsiveMenu">
+        <a class="dropMenu button" onclick="dropMenu()" onfocus="this.blur()">☰</a>
+        <div id="droppedMenuContent" class="menuContent">
+          <a class="droppedLink button en" href="#start" onfocus="this.blur()">START</a>
+          <a class="droppedLink button en" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
+          <a class="droppedLink button en" href="#skidCat" onfocus="this.blur()">PROJECTS</a>
+          <a class="droppedLink button en" href="#contact" onfocus="this.blur()">CONTACT</a>
+          <a class="droppedLink button de" href="#start" onfocus="this.blur()">START</a>
+          <a class="droppedLink button de" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
+          <a class="droppedLink button de" href="#skidCat" onfocus="this.blur()">PROJEKTE</a>
+          <a class="droppedLink button de" href="#contact" onfocus="this.blur()">KONTAKT</a>
+        </div>
+      </div>
+      <div id="frameLine"><div class="lineWhite"></div></div>
+    </div>
+
+    <div class="switchFrame">
+      <p>English</p>
+      <label class="switch">
+    	  <input id="switchLanguage" type="checkbox" name="language" value="language" onclick="languageSet()">
+  	    <span class="slider"></span>
+      </label>
+      <p>Deutsch</p>
+    </div>
+
+    <div class="header frameColumnMulti" id="start">
+      <div class="headerPictureFrame picture"></div>
+      <h1 class="headerText en">CREATIVE &nbsp; | &nbsp; MARKETING &nbsp; | &nbsp; DESIGN</h1>
+      <h1 class="headerTextSlim en">CREATIVE</br>MARKETING</br>DESIGN</h1>
+      <a class="scrollToAboutMe button en" href="#aboutMe" onfocus="this.blur()">ABOUT ME</a>
+      <h1 class="headerText de">CREATIVE &nbsp; | &nbsp; MARKETING &nbsp; | &nbsp; DESIGN</h1>
+      <h1 class="headerTextSlim de">CREATIVE</br>MARKETING</br>DESIGN</h1>
+      <a class="scrollToAboutMe button de" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
+    </div>
+
+    <div class="content wrap withBackgroundColor" id="aboutMe">
+      <div class="contentPicture picture" id="aboutMePicture"></div>
+      <div class="contentText aboutMeText en">
+        <h2>ABOUT ME</h2>
+        <p>Hey, I'm Simon and I love solving logical problems. Not only in the field of computer science, which I got
+          to know with the help of Visual Basic at the age of 13 and now mainly use for the design and programming of
+          websites and apps, but also in areas such as marketing and communication.</p>
+        <p>The question of how to start a company without money is probably the best example since I don't really have
+          good financial prerequisites as a student. ;)</p>
+        <p> But I also love to use my creative way not only to solve logical problems, but also to film, take pictures
+          and make music. Hardly a day goes by without me picking up my guitar enjoying the calm of the music.</p>
+      </div>
+      <div class="contentText aboutMeText de">
+        <h2>ÜBER MICH</h2>
+        <p>Hey, ich bin Simon und ich liebe es, logische Probleme zu lösen. Nicht nur im Bereich der Informatik, die
+          ich schon mit 13 Jahren mithilfe von Visual Basic kennenlernte und heute hauptsächlich zum Designen und
+          Programmieren von Webseiten und Apps nutze, sondern auch in Bereichen wie Marketing und Kommunikation.</p>
+        <p>Die Frage, wie ich ohne Geld ein Firma gründe, ist da wohl das beste Beispiel, da ich als Student nicht
+          wirklich gute finanzielle Grundvoraussetzungen dazu habe. ;)</p>
+        <p>Ich liebe es aber auch meine kreative Art nicht nur zum logische Probleme lösen zu nutzen, sondern auch zum
+          Filmen, Fotografieren und Musik machen. Es geht wohl kein Tag vorbei, an dem ich nicht meine Gitarre in die
+          Hand nehme und die Ruhe der Musik genieße.</p>
+      </div>
+    </div>
+
+    <div class="content wrapReverse" id="skidCat">
+      <div class="contentText skidCatText en">
+        <h2>SKIDCAT</h2>
+        <p>SkidCat is a simple game for in between. The goal of the game is to steer a cat, which has been
+          kicked away by an aggressive boy, through obstacles and to get as far as possible without hitting them.</p>
+        <p>The biggest motivation to play the game for a long time is probably the ambition
+          to achieve an even higher result everytime. Another motivation are the built-in levels that make you
+          want to know what the next level is.</p>
+        <p>The free version of the game generates revenue through advertising.
+          In addition, the game is available without adverts for little money too buy.</p>
+        <p> I designed SkidCat completely myself, which includes:</p>
+        <ul>
+          <li>Programming</li>
+          <li>3D Design and Animations</li>
+          <li>Music</li>
+        </ul>
+        <p>As an engine, I have used the Godot engine, and to design the individual objects
+          in the animations and level images I have used Blender.</p>
+      </div>
+      <div class="contentText skidCatText de">
+        <h2>SKIDCAT</h2>
+        <p>SkidCat ist ein einfaches Spiel für zwischendurch. Das Ziel des Spiels ist es, eine Katze, die von einem
+          wütenden Jungen weggekickt wurde, durch Hindernisse zu steuern und so weit wie möglich zu kommen,
+          ohne diese anzustoßen.</p>
+        <p>Die größte Motivation dabei, das Spiel immer wieder zu spielen, ist die Herausforderung, immer weiter zu
+          kommen. Auch die Level, die dazu führen, dass man wissen möchte, was das nächste Level ist, sind eine
+          weitere Motivation.</p>
+        <p>Die kostenlose Version bringt durch Werbung Umsatz, wobei es auch eine Version ohne Werbung gibt, die man
+          für wenig Geld erwerben kann.</p>
+        <p> Ich habe SkidCat komplett selber entworfen, was beinhaltet:</p>
+        <ul>
+          <li>Programmierung</li>
+          <li>3D Design und Animationen</li>
+          <li>Musik</li>
+        </ul>
+        <p>Zum Erstellen des Spiels habe ich Godot verwendet, und zum Designen der einzelnen Objekte in den
+          Animationen etc. habe ich Blender verwendet.</p>
+      </div>
+      <div class="contentPicture picture" id="skidCatPicture"></div>
+    </div>
+
+    <div class="content wrap withBackgroundColor">
+      <div class="contentPicture picture" id="bearPicture"></div>
+      <div class="contentText bearText en">
+        <h2>BEAR</h2>
+        <p>This game is not finished yet. The landscape and the game character in low poly optics
+          are ready so that a large part of the 3D objects is already created. Also, the animations and control
+          of the character are finished. There is still missing the game logic and the programming of the server.</p>
+        <p>The goal of this app is to be a small "first-person shooter" in which you control a bear,
+          pick up tomatoes and have to hit your opponent with it. The time of one round is limited and
+          you can choose before each round an advantage that you want to use in the following round.</p>
+        <p>Also for this game, I use the Godot engine and Blender for creating the 3D objects.</p>
+      </div>
+      <div class="contentText bearText de">
+        <h2>BÄR</h2>
+        <p>Dieses Spiel ist noch nicht fertig gestellt. Die Landschaft und der Spielcharakter in Low-Poly-Optik
+          sind bereit, womit ein großer Teil der 3D Objekte schon erstellt ist. Auch die Animationen und die
+          Steuerung des Charakters sind fertig gestellt. Es fehlen noch die Spiellogik und die Programmierung
+          des Servers.</p>
+        <p>Das Ziel dieser App ist ein kleiner "First-Person-Shooter" in dem du einen Bären steuerst, Tomaten
+          aufsammelst und deinen Gegner damit triffst. Eine Runde ist zeitlich begrenzt und vor jeder Runde kann
+          entschieden werden, was für einen Vorteil man in der nächsten Runde des Spiels nutzen möchte.</p>
+        <p>Auch für dieses Spiel nutze ich die Godot Engine und Blender, um die 3D-Objekte zu erstellen.</p>
+      </div>
+    </div>
+
+    <div class="content wrap" id="contact">
+      <form class="contact en" method="post" action="scripts/contact.php">
+         <!-- onsubmit="return validateContactForm()" -->
+        <div class="frameRowMulti">
+          <div class="nameFrame frameColumnMulti">
+            <label for="nameEn">NAME</label>
+            <input
+              class="name"
+              type="text"
+              id="nameEn"
+              name="name"
+              placeholder="Your name"
+              required=""
+              oninvalid="this.setCustomValidity('Please insert your name')"
+              onchange="this.setCustomValidity('')"
+              value=""
+            />
+          </div>
+          <div class="emailFrame frameColumnMulti">
+            <label for="emailEn">EMAIL</label>
+            <input
+              class="email"
+              type="text"
+              id="emailEn"
+              name="email"
+              placeholder="Your email address"
+              required=""
+              oninvalid="this.setCustomValidity('Please insert your email address')"
+              onchange="this.setCustomValidity('')"
+              value=""
+            />
+          </div>
+          <div class="subjectFrame frameColumnMulti">
+            <label for="subjectEn">SUBJECT</label>
+            <input
+              class="subject"
+              type="text"
+              id="subjectEn"
+              name="subject"
+              placeholder="Subject"
+              required=""
+              oninvalid="this.setCustomValidity('Please insert a subject')"
+              onchange="this.setCustomValidity('')"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="messageFrame frameColumnMulti">
+          <label for="messageEn">MESSAGE</label>
+          <textarea
+            class="message"
+            rows="10"
+            cols="30"
+            id="messageEn"
+            name="message"
+            maxlength="1700"
+            minlength="10"
+            placeholder="Your message"
+            required=""
+            oninvalid="this.setCustomValidity('Please insert your message')"
+            onchange="this.setCustomValidity('')"
+          ></textarea>
+        </div>
+        <div class="frame pot">
+          <label for="lastnameEn">Don't fill this field!</label>
+          <textarea
+            rows="1"
+            cols="30"
+            id="lastnameEn"
+            name="lastname"
+            maxlength="12"
+            minlength="5"
+            placeholder="lastname"
+          ></textarea>
+        </div>
+        <div class="frame">
+          <button
+            class="submit button"
+            type="submit"
+            name="send"
+            onfocus="this.blur()"
+          >
+            SEND
+          </button>
+        </div>
+        <div class="returnMsg" style="display: none" role="alert">
+          Your message was sent successfully.
+        </div>
+      </form>
+      <form class="contact de" method="post" action="scripts/contact.php">
+        <div class="frameRowMulti">
+          <div class="nameFrame frameColumnMulti">
+            <label for="nameDe">NAME</label>
+            <input
+              class="name"
+              type="text"
+              id="nameDe"
+              name="name"
+              placeholder="Dein Name"
+              required=""
+              oninvalid="this.setCustomValidity('Gib deinen Namen ein')"
+              onchange="this.setCustomValidity('')"
+              value=""
+            />
+          </div>
+          <div class="emailFrame frameColumnMulti">
+            <label for="emailDe">EMAIL</label>
+            <input
+              class="email"
+              type="text"
+              id="emailDe"
+              name="email"
+              placeholder="Deine Email-Adresse"
+              required=""
+              oninvalid="this.setCustomValidity('Gib deine Email-Adresse ein')"
+              onchange="this.setCustomValidity('')"
+              value=""
+            />
+          </div>
+          <div class="subjectFrame frameColumnMulti">
+            <label for="subjectDe">BETREFF</label>
+            <input
+              class="subject"
+              type="text"
+              id="subjectDe"
+              name="subject"
+              placeholder="Betreff"
+              required=""
+              oninvalid="this.setCustomValidity('Gib deinen Betreff ein')"
+              onchange="this.setCustomValidity('')"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="messageFrame frameColumnMulti">
+          <label for="messageDe">NACHRICHT</label>
+          <textarea
+            class="message"
+            rows="10"
+            cols="30"
+            id="messageDe"
+            name="message"
+            maxlength="1700"
+            minlength="10"
+            placeholder="Deine Nachricht"
+            required=""
+            oninvalid="this.setCustomValidity('Gib deine Nachricht ein')"
+            onchange="this.setCustomValidity('')"
+          ></textarea>
+        </div>
+        <div class="frame pot">
+          <label for="lastnameDe">Bitte nicht ausfüllen!</label>
+          <textarea
+            rows="1"
+            cols="30"
+            id="lastnameDe"
+            name="lastname"
+            maxlength="12"
+            minlength="5"
+            placeholder="nachname"
+          ></textarea>
+        </div>
+        <div class="frame">
+          <button
+            class="submit button"
+            type="submit"
+            name="send"
+            onfocus="this.blur()"
+          >
+            ABSENDEN
+          </button>
+        </div>
+        <div class="returnMsg" style="display: none" role="alert">
+          Your message was sent successfully.
+        </div>
+      </form>
+    </div>
+
+    <div class="lineWhite"></div>
+
+    <div class="footer">
+      <div class="footerPartFrame">
+        <img src="graphics/locationSimple.svg" alt="Adresse" class="footerPicture" />
+        <div class="footerText">
+          <p>
+            Simon Herrmann<br />
+            Ringstraße 6a<br />
+            76287 Rheinstetten<br />
+            Homepage: www.erikbent.de
+          </p>
+        </div>
+      </div>
+      <div class="footerPartFrame">
+        <img src="graphics/emailSimple.svg" alt="Email" class="footerPicture" />
+        <div class="footerText"><p>Mail: contact@erikbent.de</p></div>
+      </div>
+    </div>
+
+    <div class="footerCopyright">
+      <p>
+        © Simon Herrmann<br />
+        <a class="en" href="imprint.html" style="color: white">Imprint</a>
+        <a class="en" href="dataProtection.html" style="color: white">Data protection</a><br />
+        <a class="de" href="imprint.html" style="color: white">Impressum</a>
+        <a class="de" href="dataProtection.html" style="color: white">Datenschutz</a><br />
+        Made with ♥ by
+        <a
+          href="https://github.com/siherrmann"
+          style="color: white"
+          target="_blank"
+          rel="noopener"
+          >siherrmann</a
+        ><br />
+      </p>
+    </div>
+
+    <?php
+      if (!isset($_COOKIE['cookiesAccepted'])) {
+    ?>
+
+    <div id="cookiePopup">
+      <span class="hinweis en">We use cookies. By continuing to use the website, you agree to the use of cookies.<br/>
+      </span>
+      <span class="hinweis de">Diese Webseite nutzt Cookies, um bestmögliche Funktionalität bieten zu können.<br/>
+      </span>
+      <span class="more-info en"><a href="/dataProtection.html">Further information</a><br/><br/></span>
+      <span class="more-info de"><a href="/dataProtection.html">Weitere Informationen</a><br/><br/></span>
+      <a class="cookieButton en" onclick="cookieOk()">OK, I agree.</a>
+      <a class="cookieButton de" onclick="cookieOk()">Ok, verstanden.</a>
+    </div>
+
+    <?php
+      };
+    ?>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="scripts/main.js" async></script>
+  </body>
+</html>

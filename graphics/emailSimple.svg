@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg2"
+   width="1000"
+   height="1000"
+   viewBox="0 0 1000 1000"
+   sodipodi:docname="emailSimple.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="615,485"
+       end_point="615,716.1017"
+       center_point="615,600.55085"
+       id="path-effect4512"
+       is_visible="true"
+       mode="free"
+       discard_orig_path="true"
+       fuse_paths="false"
+       oposite_fuse="false" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3840"
+     inkscape:window-height="2071"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="0.52149125"
+     inkscape:cx="452.30434"
+     inkscape:cy="646.94543"
+     inkscape:window-x="-10"
+     inkscape:window-y="-10"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4491" />
+  </sodipodi:namedview>
+  <path
+     style="fill:#ad343e;fill-opacity:1;stroke:none;stroke-width:7.53784943;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+     d="M 996.23108,499.99998 A 496.23108,496.23108 0 0 1 499.99998,996.23108 496.23108,496.23108 0 0 1 3.768915,499.99998 496.23108,496.23108 0 0 1 499.99998,3.768925 496.23108,496.23108 0 0 1 996.23108,499.99998 Z"
+     id="path4484"
+     inkscape:connector-curvature="0" />
+  <rect
+     style="fill:#fdfffc;fill-opacity:1;stroke:none;stroke-width:7.55905533;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+     id="rect4487"
+     width="626.44067"
+     height="444.06781"
+     x="186.77966"
+     y="260.33896"
+     ry="59.661041" />
+  <g
+     id="g4524"
+     transform="translate(0.03547138,-5)">
+    <path
+       sodipodi:nodetypes="ccsc"
+       inkscape:connector-curvature="0"
+       id="path4489"
+       d="m 150.00321,256.68153 300,300 c 0,0 49.99679,53.31847 100,0 53.62353,-57.17883 300,-300 300,-300"
+       style="fill:none;stroke:#ad343e;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       style="stroke:#ad343e;stroke-width:30;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="g4518">
+      <path
+         style="fill:none;stroke:#ad343e;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 160,720 390,490"
+         id="path4495"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#ad343e;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 610,490 840,720"
+         id="path4514"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,705 @@
+html {
+  scroll-behavior: smooth;
+  background-color: #0a141f;
+  background: url(../graphics/background2.jpg) no-repeat center center fixed;
+  height: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.de:lang(en) {
+  display: none;
+}
+
+.en:lang(de) {
+  display: none;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('../fonts/dosis-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/dosis-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  font-family: 'Dosis';
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+form {
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+iframe {
+  border: none;
+}
+
+label,
+h1,
+h2,
+h3,
+h4,
+li,
+p,
+a {
+  color: #fdfffc;
+  font-family: 'Dosis';
+}
+
+h2 {
+  letter-spacing: 4px;
+}
+
+.button {
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Dosis';
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.picture {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.frameRowMulti {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.frameColumnMulti {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.frame {
+  display: block;
+  border: none;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080f17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fdfffc;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* navbar */
+
+#navbar {
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  flex-flow: wrap;
+  justify-content: flex-end;
+}
+
+.menuPicture {
+  margin: auto auto auto 15px;
+  width: 40px;
+  height: 30px;
+  background-image: url(../graphics/SchriftzugKleinWeiß.svg);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.linkTo,
+.start {
+  width: 15vw;
+  min-width: 100px;
+  max-width: 180px;
+  margin: 10px;
+  padding: 5px 10px 7px 10px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.linkTo {
+  color: #fdfffc;
+}
+
+.start {
+  color: white;
+  border-color: #ffd8ad;
+  border-style: solid;
+  border-width: 1.5px;
+}
+
+.linkTo:hover {
+  background-color: #0a141f;
+}
+
+.start:hover {
+  background-color: #ffd8ad;
+  color: black;
+}
+
+.responsiveMenu {
+  display: none;
+}
+
+.dropMenu {
+  margin: 1%;
+  padding: 10px 10px 12px 10px;
+  background-color: #ffd8ad;
+  text-decoration: none;
+  border-radius: 40px;
+  border-color: #ffd8ad;
+  border-style: solid;
+  border-width: 1.5px;
+  color: black;
+}
+
+.dropMenu:hover {
+  color: white;
+  background-color: #0a141f;
+}
+
+.menuContent {
+  display: none;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+
+.droppedLink {
+  width: 98%;
+  float: right;
+  margin: 2px 1%;
+  padding: 12px 0px;
+  border-radius: 40px;
+  background-color: #080f17;
+  text-decoration: none;
+}
+
+.droppedLink:hover {
+  background-color: #0a141f;
+}
+
+.drop {
+  display: flex;
+}
+
+.frameLine {
+  width: 100%;
+  height: 1px;
+  background-color: #080f17;
+  display: none;
+}
+
+.lineWhite {
+  width: 66%;
+  height: 1px;
+  float: right;
+  background-color: #fdfffc;
+}
+
+@media all and (max-width: 1300px) {
+  .linkTo,
+  .start {
+    width: 14vw;
+    min-width: 100px;
+    margin: 1vw;
+  }
+}
+
+@media all and (max-width: 620px) {
+  .linkTo,
+  .start {
+    display: none;
+  }
+
+  .responsiveMenu {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .menuPicture {
+    display: none;
+  }
+}
+
+/* select language*/
+
+.switchFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  width: 50px;
+  height: 23px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 23px;
+  border-style: solid;
+  border-color: #ffd8ad;
+  border-width: 1.5px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 2px;
+  background-color: #fdfffc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+/* header */
+
+.header {
+  padding: 100px 0px;
+  min-height: 70vh;
+  height: max-content;
+  width: 100%;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headerPictureFrame {
+  width: 100%;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  height: 30vw;
+  max-height: 20vh;
+  background-image: url(../graphics/ErikBentStraightSlim.svg);
+}
+
+.headerText {
+  padding: 1%;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 20px;
+  font-weight: 200;
+}
+
+.headerTextSlim {
+  display: none;
+  padding: 1%;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 20px;
+  font-weight: 200;
+}
+
+.scrollToAboutMe {
+  font-size: 20px;
+  padding: 10px 80px;
+  color: #080f17;
+  background-color: #ffd8ad;
+  border-radius: 50px;
+}
+
+.scrollToAboutMe:hover {
+  background-color: #154848;
+  color: #fdfffc;
+}
+
+@media all and (max-width: 620px) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .headerTextSlim {
+    font-size: 30px;
+    letter-spacing: 15px;
+  }
+
+  .scrollToAboutMe {
+    width: 100%;
+    margin: 0px;
+    padding: 15px 0;
+  }
+
+  .headerPicture {
+    width: 100%;
+    height: 40vw;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .headerText {
+    display: none;
+  }
+
+  .headerTextSlim {
+    display: block;
+  }
+}
+
+/* content */
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  padding: 50px 17%;
+  overflow: hidden;
+}
+
+.contentSite {
+  display: flex;
+  width: 100%;
+  min-height: 70vh;
+  height: max-content;
+  padding: 50px 17%;
+  overflow: hidden;
+}
+
+.wrap {
+  flex-flow: row wrap;
+}
+
+.wrapReverse {
+    flex-flow: row wrap-reverse;
+}
+
+.withBackgroundColor {
+  background: rgba(8,15,23,0.8);
+}
+
+.contentPicture {
+  height: 100%;
+  display: block;
+  flex-flow: column wrap;
+  margin: 20px;
+}
+
+.contentText {
+  height: auto;
+  display: block;
+  flex-flow: column wrap;
+  margin: 20px;
+}
+
+.aboutMeText,
+.skidCatText {
+  width: 60%;
+}
+
+.bearText {
+  width: 40%;
+}
+
+#aboutMePicture {
+  background-image: url(../graphics/aboutMePicture.jpg);
+  min-height: 400px;
+  width: 30%;
+}
+
+#skidCatPicture {
+  background-image: url(../graphics/skidCatPicture.jpg);
+  min-height: 500px;
+  max-height: 700px;
+  width: 30%;
+}
+
+#skidCatPicture,
+#bearPicture {
+  filter: grayscale(1);
+  transition: all .6s ease;
+}
+
+#skidCatPicture:hover,
+#bearPicture:hover {
+  filter: none;
+}
+
+#bearPicture {
+  background-image: url(../graphics/bearPicture.jpg);
+  min-height: 300px;
+  width: 50%;
+}
+
+.contact {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.contentImprint {
+  height: 80vh;
+}
+
+.emailFrame,
+.nameFrame,
+.subjectFrame {
+  width: 32%;
+  margin: 10px 0px;
+}
+
+.messageFrame {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.pot {
+  display: none;
+}
+
+.email,
+.message,
+.name,
+.subject,
+.submit {
+  background-color: rgba(0,0,0,0);
+  padding: 5px 10px;
+  border: 1px solid #fdfffc;
+  border-radius: 5px;
+  font-family: 'Dosis';
+  font-size: 20px;
+  font-weight: 500;
+  color: #fdfffc;
+}
+
+.email,
+.name,
+.subject {
+  max-width: 100%;
+  height: 45px;
+}
+
+.message {
+  max-width: 100%;
+  height: 400px;
+  padding-top: 10px;#
+}
+
+.submit {
+  width: 304px;
+  height: 45px;
+  float: right;
+  margin: 10px 0px;
+  color: white;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #ffd8ad;
+  border-radius: 45px;
+}
+
+.submit:hover {
+  background: #ffd8ad;
+  color: black;
+}
+
+.returnMsg {
+  color: #fdfffc;
+}
+
+@media all and (max-width: 1500px) {
+  .content {
+    padding: 50px 5%;
+  }
+
+  .emailFrame,
+  .nameFrame {
+    width: 47%;
+  }
+
+  .subjectFrame {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .contentText,
+  .contentPicture {
+    width: 100%
+  }
+
+  .emailFrame,
+  .nameFrame,
+  .subjectFrame {
+    width: 100%;
+  }
+}
+
+@media all and (max-height: 1000px) {
+  .message {
+    height: 200px;
+  }
+}
+
+@media all and (max-width: 880px) {
+  #aboutMeText,
+  #skidCatText,
+  #bearText,
+  #aboutMePicture,
+  #skidCatPicture,
+  #bearPicture {
+    width: 100%;
+  }
+
+  .content {
+    height: max-content;
+    padding: 50px 0px;
+  }
+
+  .submit {
+    display: block;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.footerPartFrame {
+  display: flex;
+  width: 280px;
+  margin: 10px 20px;
+  flex-direction: column;
+}
+
+.footerPicture {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  padding-top: 40px;
+}
+
+.footerText {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.footerCopyright {
+  width: 100%;
+  color: white;
+  background-color: rgba(8,15,23,0.8);
+  text-align: center;
+  font-size: 14px;
+}
+
+#cookiePopup {
+  z-index: 100;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 250px;
+  padding: 20px;
+  color: #fdfffc;
+  background: #080f17;
+  text-align: center;
+  font-family: 'Dosis';
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.cookieButton {
+  width: 230px;
+  height: 50px;
+  padding: 5px 60px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: #fdfffc;
+  background-color: #124559;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.cookieButton:hover {
+  background-color: #154848;
+  color: white;
+}
+
+@media all and (max-width: 880px) {
+  .footer {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footerPartFrame {
+    display: flex;
+    width: 250px;
+    margin: 10px auto;
+    flex-direction: column;
+  }
+}
