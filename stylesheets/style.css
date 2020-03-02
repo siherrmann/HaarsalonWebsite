@@ -22,7 +22,7 @@ body {
   flex-flow: row wrap;
   margin: 0 auto;
   font-family: 'Yanone Kaffeesatz';
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 1px;
   font-weight: 600;
   line-height: 1.5;
@@ -58,7 +58,7 @@ h2 {
   text-decoration: none;
   font-family: 'Yanone Kaffeesatz';
   transition: all 0.3s ease-in-out;
-  font-size: 15px;
+  font-size: 17px;
   cursor: pointer;
 }
 
