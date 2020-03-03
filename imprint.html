@@ -4,7 +4,7 @@
   <head>
     <title>Erik Bent</title>
     <meta name="description" content="Erik Bent" />
-    <meta name="keywords" content="erik, bent, design, marketing, app, skidcat, game"/>
+    <meta name="keywords" content="erik, bent, design, marketing, app, prices, game"/>
     <meta name="author" content="Simon Herrmann">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,71 +24,72 @@
 
   <body id="site">
 
-    <div class="frame sticky" id="navbar">
-      <a class="linkTo button" onclick="window.location.href='index.php#aboutMe'" onfocus="this.blur()">ABOUT ME</a>
-      <a class="linkTo button" onclick="window.location.href='index.php#skidCat'" onfocus="this.blur()">PROJECTS</a>
-      <a class="linkTo button" onclick="window.location.href='index.php#contact'" onfocus="this.blur()">CONTACT</a>
+    <div class="frame sticky" id="navbarSide">
+      <a class="linkTo button" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
+      <a class="linkTo button" href="#prices" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
+      <a class="linkTo button" href="#contact" onfocus="this.blur()">KONTAKT</a>
+      <a class="start button" href="index.html" onfocus="this.blur()">START</a>
+    </div>
+
+    <div class="frame sticky navbarSite" id="navbar">
+      <a class="linkTo button" onclick="window.location.href='index.php#aboutMe'" onfocus="this.blur()">ÜBER MICH</a>
+      <a class="linkTo button" onclick="window.location.href='index.php#prices'" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
+      <a class="linkTo button" onclick="window.location.href='index.php#contact'" onfocus="this.blur()">KONTAKT</a>
       <a class="start button" onclick="window.location.href='index.php'" onfocus="this.blur()">START</a>
       <div class="responsiveMenu">
         <a class="dropMenu button" onclick="dropMenu()" onfocus="this.blur()">☰</a>
         <div id="droppedMenuContent" class="menuContent">
           <a class="droppedLink button" onclick="window.location.href='index.php'" onfocus="this.blur()">START</a>
-          <a class="droppedLink button" onclick="window.location.href='index.php#aboutMe'" onfocus="this.blur()">ABOUT ME</a>
-          <a class="droppedLink button" onclick="window.location.href='index.php#skidCat'" onfocus="this.blur()">PROJECTS</a>
-          <a class="droppedLink button" onclick="window.location.href='index.php#contact'" onfocus="this.blur()">CONTACT</a>
+          <a class="droppedLink button" onclick="window.location.href='index.php#aboutMe'" onfocus="this.blur()">ÜBER MICH</a>
+          <a class="droppedLink button" onclick="window.location.href='index.php#prices'" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
+          <a class="droppedLink button" onclick="window.location.href='index.php#contact'" onfocus="this.blur()">KONTAKT</a>
         </div>
-      </div>
-      <div class="frameLine">
-        <div class="lineWhite"></div>
       </div>
     </div>
 
-    <div id="imprint"></div>
+    <div class="headerPictureFrame headerSite">
+      <div class="headerPicture picture"></div>
+    </div>
 
-    <div class="contentSite frameColumnMulti">
+    <div class="contentSite frameColumnMulti" id="imprint">
       <h2>Impressum</h2>
-      <p>Simon Herrmann<br>
-      Ringstraße 6a<br>
-      76287 Rheinstetten<br>
-      Mail: contact@erikbent.de<br>
-      Homepage: <a href="index.php">www.erikbent.de</a><br>
-      USt-IdNr: DE ...</p>
+      <p class="footerTextColor">
+        Michaela Lachenmaier<br />
+        Nordstraße 9<br />
+        76437 Ottersdorf<br />
+        Homepage: <a href="index.php">www.friseur-mila.de</a></p>
       <h3></h3>
     </div>
 
     <div class="lineWhite"></div>
 
-    <div class="footer">
+    <div class="content footer">
       <div class="footerPartFrame">
-        <img src="graphics/location.svg" alt="Adresse" class="footerPicture" />
+        <img src="graphics/locationSimple.svg" alt="Adresse" class="footerPicture" />
         <div class="footerText">
-          <p>
-            Simon Herrmann<br />
-            Ringstraße 6a<br />
-            76287 Rheinstetten<br />
-            Homepage: www.erikbent.de
+          <p class="footerTextColor">
+            Michaela Lachenmaier<br />
+            Nordstraße 9<br />
+            76437 Ottersdorf<br />
+            Homepage: www.friseur-mila.de
           </p>
         </div>
       </div>
       <div class="footerPartFrame">
-        <img src="graphics/email.svg" alt="Email" class="footerPicture" />
-        <div class="footerText"><p>Mail: contact@erikbent.de</p></div>
+        <img src="graphics/emailSimple.svg" alt="Email" class="footerPicture" />
+        <div class="footerText"><p class="footerTextColor">Mail:<br />contact@friseurmila.de</p></div>
       </div>
       <div class="footerPartFrame">
-        <img src="graphics/phone.svg" alt="Telefon" class="footerPicture" />
-        <div class="footerText">
-          <p>
-            Fon .../...
-          </p>
-        </div>
+        <img src="graphics/phoneSimple.svg" alt="Telefon" class="footerPicture">
+        <div class="footerText"><p class="footerTextColor">Mobil:<br />01520/2949088</p></div>
       </div>
     </div>
 
     <div class="footerCopyright">
       <p>
-        © Simon Herrmann<br />
-        <a href="imprint.html" style="color: white">Impressum</a>
-        <a href="dataProtection.html" style="color: white">Datenschutz</a><br />
+        © Michaela Lachenmaier<br />
+        <a class="de" href="imprint.html#imprint" style="color: white">Impressum</a>
+        <a class="de" href="dataProtection.html#dataProtection" style="color: white">Datenschutz</a><br />
         Made with ♥ by
         <a
           href="https://github.com/siherrmann"
@@ -99,5 +100,7 @@
         ><br />
       </p>
     </div>
+
+    <script type="text/javascript" src="scripts/main.js" async></script>
   </body>
 </html>

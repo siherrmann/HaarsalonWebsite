@@ -214,6 +214,10 @@ h2 {
     margin-top: 0vh;
   }
 
+  .navbarSite {
+    background-color: rgb(5,5,5, 0.7);
+  }
+
   .sticky {
     position: sticky;
     top: 0;
@@ -245,10 +249,6 @@ h2 {
     width: 100%;
     height: auto;
     flex-direction: column;
-  }
-
-  .menuPicture {
-    display: none;
   }
 }
 
@@ -295,6 +295,10 @@ h2 {
     padding: 40%;
     background-image: url(../graphics/TitleLogo.svg);
   }
+
+  .headerSite {
+    display: none;
+  }
 }
 
 /* content */
@@ -316,6 +320,7 @@ h2 {
   height: max-content;
   padding: 5px 20%;
   overflow: hidden;
+  background-color: rgb(5,5,5, 0.7);
 }
 
 .wrap {
@@ -500,6 +505,16 @@ h2 {
   .subjectFrame {
     width: 100%;
   }
+
+  .contentSite {
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+    height: max-content;
+    padding: 5px 20px;
+    overflow: hidden;
+    background-color: rgb(5,5,5, 0.7);
+  }
 }
 
 @media all and (max-height: 1000px) {
@@ -510,10 +525,10 @@ h2 {
 
 @media all and (max-width: 880px) {
   #aboutMeText,
-  #skidCatText,
+  #pricesText,
   #bearText,
   #aboutMePicture,
-  #skidCatPicture,
+  #pricesPicture,
   #bearPicture {
     width: 100%;
   }
