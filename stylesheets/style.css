@@ -281,7 +281,7 @@ h2 {
 .headerPartFrame {
   display: flex;
   flex-direction: column;
-  width: 49%;
+  width: 40%;
   min-width: 400px;
   height: 150px;
   border: 2px solid #f6d8ae;
