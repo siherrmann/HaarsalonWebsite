@@ -263,7 +263,7 @@ h2 {
 
 .headerPicture {
   margin-right: 20%;
-  height: 80vh;
+  height: calc(100vh - 320px);
   padding: 5%;
   background-image: url(../graphics/TitleLogo.svg);
 }
@@ -295,18 +295,13 @@ h2 {
 @media all and (max-width: 1300px) {
   .headerPictureFrame {
     width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    height: 100vh;
   }
 
   .headerPicture {
     margin-right: 0%;
-    padding: 5%;
-    height: 60vh;
     width: 80%;
-    background-image: url(../graphics/TitleLogo.svg);
+    height: calc(100vh - 400px);
   }
 
   .headerSite {
@@ -323,9 +318,18 @@ h2 {
 
   .headerPartFrame {
     width: 30%;
-    min-width: 400px;
     height: 150px;
-    border: 2px solid #f6d8ae;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .headerText {
+    font-size: 15px;
+  }
+
+  .headerPartFrame {
+    min-width: 300px;
+    height: 120px;
   }
 }
 
@@ -333,31 +337,6 @@ h2 {
   .headerPartFrame {
     width: 90%;
     min-width: 300px;
-  }
-}
-
-@media all and (max-height: 1000px) {
-  .headerPictureFrame {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .headerPicture {
-    height: 50vh;
-  }
-
-  .headerText {
-    font-size: 15px;
-  }
-
-  .headerPartFrame {
-    width: 30%;
-    min-width: 300px;
-    height: 110px;
-    border: 2px solid #f6d8ae;
   }
 }
 
