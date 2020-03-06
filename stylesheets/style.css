@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
   background-color: #F6D8AE;
-  background-image: url(../graphics/woodBackgroundDarkMin.jpg);
+  background-image: url(../graphics/woodBackgroundDarkMin2.jpg);
   height: 100%;
   background-size: cover;
   -webkit-background-size: cover;
@@ -349,7 +349,7 @@ h2 {
   width: 100%;
   padding: 5vh 20%;
   overflow: hidden;
-  background-color: rgb(5,5,5, 0.7);
+  /* background-color: rgb(5,5,5, 0.7); */
 }
 
 .contentSite {
