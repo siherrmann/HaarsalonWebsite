@@ -1,106 +1,95 @@
 <!DOCTYPE HTML>
 <html lang="de">
 
-  <head>
-    <title>Erik Bent</title>
-    <meta name="description" content="Erik Bent" />
-    <meta name="keywords" content="erik, bent, design, marketing, app, prices, game"/>
-    <meta name="author" content="Simon Herrmann">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#195757">
-    <link rel="shortcut icon" href="/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#195757">
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#195757">
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <script type="text/javascript" src="scripts/scripts.js" async></script>
-    <link href="https://fonts.googleapis.com/css?family=Dosis:200&display=swap" rel="stylesheet">
-  </head>
+<head>
+  <title>Erik Bent</title>
+  <meta name="description" content="Erik Bent" />
+  <meta name="keywords" content="erik, bent, design, marketing, app, prices, game" />
+  <meta name="author" content="Simon Herrmann">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#195757">
+  <link rel="shortcut icon" href="/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#195757">
+  <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#195757">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <script type="text/javascript" src="scripts/scripts.js" async></script>
+  <link href="https://fonts.googleapis.com/css?family=Dosis:200&display=swap" rel="stylesheet">
+</head>
 
-  <body id="site">
+<body id="site">
 
-    <div class="frame sticky" id="navbarSide">
-      <a class="linkTo button" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
-      <a class="linkTo button" href="#prices" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
-      <a class="linkTo button" href="#contact" onfocus="this.blur()">KONTAKT</a>
-      <a class="start button" href="index.html" onfocus="this.blur()">START</a>
-    </div>
-
-    <div class="frame sticky navbarSite" id="navbar">
-      <a class="linkTo button" onclick="window.location.href='index.php#aboutMe'" onfocus="this.blur()">ÜBER MICH</a>
-      <a class="linkTo button" onclick="window.location.href='index.php#prices'" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
-      <a class="linkTo button" onclick="window.location.href='index.php#contact'" onfocus="this.blur()">KONTAKT</a>
-      <a class="start button" onclick="window.location.href='index.php'" onfocus="this.blur()">START</a>
-      <div class="responsiveMenu">
-        <a class="dropMenu button" onclick="dropMenu()" onfocus="this.blur()">☰</a>
-        <div id="droppedMenuContent" class="menuContent">
-          <a class="droppedLink button" onclick="window.location.href='index.php'" onfocus="this.blur()">START</a>
-          <a class="droppedLink button" onclick="window.location.href='index.php#aboutMe'" onfocus="this.blur()">ÜBER MICH</a>
-          <a class="droppedLink button" onclick="window.location.href='index.php#prices'" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
-          <a class="droppedLink button" onclick="window.location.href='index.php#contact'" onfocus="this.blur()">KONTAKT</a>
-        </div>
+  <div class="frame sticky" id="navbar">
+    <a class="linkTo button" onclick="window.location.href='index.php#aboutMe'" onfocus="this.blur()">ÜBER MICH</a>
+    <a class="linkTo button" onclick="window.location.href='index.php#prices'" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
+    <a class="linkTo button" onclick="window.location.href='index.php#contact'" onfocus="this.blur()">KONTAKT</a>
+    <a class="start button" onclick="window.location.href='index.php'" onfocus="this.blur()">START</a>
+    <div class="responsiveMenu">
+      <a class="dropMenu button" onclick="dropMenu()" onfocus="this.blur()">☰</a>
+      <div id="droppedMenuContent" class="menuContent">
+        <a class="droppedLink button" onclick="window.location.href='index.php'" onfocus="this.blur()">START</a>
+        <a class="droppedLink button" onclick="window.location.href='index.php#aboutMe'" onfocus="this.blur()">ÜBER MICH</a>
+        <a class="droppedLink button" onclick="window.location.href='index.php#prices'" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
+        <a class="droppedLink button" onclick="window.location.href='index.php#contact'" onfocus="this.blur()">KONTAKT</a>
       </div>
     </div>
+  </div>
 
-    <div class="headerPictureFrame headerSite">
-      <div class="headerPicture picture"></div>
-    </div>
+  <div class="contentSite frameColumnMulti" id="imprint">
+    <h2>Impressum</h2>
+    <p class="footerTextColor">
+      Michaela Lachenmaier<br />
+      Nordstraße 9<br />
+      76437 Ottersdorf<br />
+      Mobil: 01520/2949088<br />
+      Homepage: <a href="index.php">www.friseur-mila.de</a></p>
+    <h3></h3>
+  </div>
 
-    <div class="contentSite frameColumnMulti" id="imprint">
-      <h2>Impressum</h2>
-      <p class="footerTextColor">
-        Michaela Lachenmaier<br />
-        Nordstraße 9<br />
-        76437 Ottersdorf<br />
-        Homepage: <a href="index.php">www.friseur-mila.de</a></p>
-      <h3></h3>
-    </div>
+  <div class="lineWhite"></div>
 
-    <div class="lineWhite"></div>
-
-    <div class="content footer">
-      <div class="footerPartFrame">
-        <img src="graphics/locationSimple.svg" alt="Adresse" class="footerPicture" />
-        <div class="footerText">
-          <p class="footerTextColor">
-            Michaela Lachenmaier<br />
-            Nordstraße 9<br />
-            76437 Ottersdorf<br />
-            Homepage: www.friseur-mila.de
-          </p>
-        </div>
-      </div>
-      <div class="footerPartFrame">
-        <img src="graphics/emailSimple.svg" alt="Email" class="footerPicture" />
-        <div class="footerText"><p class="footerTextColor">Mail:<br />contact@friseurmila.de</p></div>
-      </div>
-      <div class="footerPartFrame">
-        <img src="graphics/phoneSimple.svg" alt="Telefon" class="footerPicture">
-        <div class="footerText"><p class="footerTextColor">Mobil:<br />01520/2949088</p></div>
+  <div class="content footer">
+    <div class="footerPartFrame">
+      <img src="graphics/locationSimple.svg" alt="Adresse" class="footerPicture" />
+      <div class="footerText">
+        <p class="footerTextColor">
+          Michaela Lachenmaier<br />
+          Nordstraße 9<br />
+          76437 Ottersdorf<br />
+          Homepage: www.friseur-mila.de
+        </p>
       </div>
     </div>
-
-    <div class="footerCopyright">
-      <p>
-        © Michaela Lachenmaier<br />
-        <a class="de" href="imprint.html#imprint" style="color: white">Impressum</a>
-        <a class="de" href="dataProtection.html#dataProtection" style="color: white">Datenschutz</a><br />
-        Made with ♥ by
-        <a
-          href="https://github.com/siherrmann"
-          style="color: white"
-          target="_blank"
-          rel="noopener"
-          >siherrmann</a
-        ><br />
-      </p>
+    <div class="footerPartFrame">
+      <img src="graphics/emailSimple.svg" alt="Email" class="footerPicture" />
+      <div class="footerText">
+        <p class="footerTextColor">Mail:<br />kontakt@friseur-mila.de</p>
+      </div>
     </div>
+    <div class="footerPartFrame">
+      <img src="graphics/phoneSimple.svg" alt="Telefon" class="footerPicture">
+      <div class="footerText">
+        <p class="footerTextColor">Mobil:<br />01520/2949088</p>
+      </div>
+    </div>
+  </div>
 
-    <script type="text/javascript" src="scripts/main.js" async></script>
-  </body>
+  <div class="footerCopyright">
+    <p>
+      © Michaela Lachenmaier<br />
+      <a class="de" href="imprint.html#imprint" style="color: white">Impressum</a>
+      <a class="de" href="dataProtection.html#dataProtection" style="color: white">Datenschutz</a><br />
+      Made with ♥ by
+      <a href="https://github.com/siherrmann" style="color: white" target="_blank" rel="noopener">siherrmann</a><br />
+    </p>
+  </div>
+
+  <script type="text/javascript" src="scripts/main.js" async></script>
+</body>
+
 </html>
