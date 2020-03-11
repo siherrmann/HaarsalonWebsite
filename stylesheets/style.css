@@ -1,7 +1,6 @@
 html {
   scroll-behavior: smooth;
-  background-color: #F6D8AE;
-  background-image: url(../graphics/woodBackgroundDarkMin2.jpg);
+  background-color: white;
   height: 100%;
   background-size: cover;
   -webkit-background-size: cover;
@@ -45,7 +44,7 @@ h4,
 li,
 p,
 a {
-  color: #f6d8ae;
+  color: black;
   font-family: 'Yanone Kaffeesatz';
 }
 
@@ -105,18 +104,16 @@ h2 {
 
 /* navbar */
 
-#navbarSide {
+#navbar {
   z-index: 10;
   display: flex;
-  flex-flow: column;
-  width: 20%;
-  justify-content: flex-start;
+  flex-flow: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-end;
   align-items: flex-end;
-  margin-top: 25vh;
-}
-
-#navbar {
-  display: none;
+  margin-top: 0vh;
+  background-color: white;
 }
 
 .sticky {
@@ -135,12 +132,12 @@ h2 {
 }
 
 .linkTo {
-  color: #70A9A1;
+  color: black;
 }
 
 .start {
-  border: 2px solid #70A9A1;
-  color: #70A9A1;
+  border: 2px solid black;
+  color: black;
 }
 
 .linkTo:hover {
@@ -158,18 +155,14 @@ h2 {
 }
 
 .dropMenu {
-  margin: 1%;
   padding: 10px 10px 12px 10px;
-  background-color: #70A9A1;
   text-decoration: none;
-  border-radius: 40px;
-  border: 2px solid #70A9A1;
   color: #050505;
 }
 
 .dropMenu:hover {
-  color: #70A9A1;
-  background-color: #050505;
+  color: #050505;
+  background-color: #70A9A1;
 }
 
 .menuContent {
@@ -182,10 +175,7 @@ h2 {
 .droppedLink {
   width: 98%;
   float: right;
-  margin: 2px 1%;
   padding: 12px 0px;
-  border-radius: 40px;
-  background-color: #050505;
   text-decoration: none;
 }
 
@@ -199,23 +189,9 @@ h2 {
 }
 
 @media all and (max-width: 1300px) {
-  #navbarSide {
-    display: none;
-  }
-
-  #navbar {
-    z-index: 10;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 0vh;
-  }
 
   .navbarSite {
-    background-color: rgb(5,5,5, 0.7);
+    background-color: white;
   }
 
   .sticky {
@@ -254,18 +230,47 @@ h2 {
 
 /* header */
 
-.headerPictureFrame {
-  width: 80%;
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .headerContent {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  position: relative;
+  z-index: 2;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0,0,0,0.5);
+  z-index: 1;
 }
 
 .headerPicture {
-  margin-right: 20%;
-  height: calc(100vh - 320px);
-  padding: 5%;
-  background-image: url(../graphics/TitleLogo.svg);
+  height: 20vh;
+  background-image: url(../graphics/LogoSimple.svg);
 }
 
 .header {
@@ -287,23 +292,12 @@ h2 {
   border: 2px solid #f6d8ae;
 }
 
-.headerText {
+.whiteCenterText {
   text-align: center;
-  font-size: 18px;
+  color: white;
 }
 
 @media all and (max-width: 1300px) {
-  .headerPictureFrame {
-    width: 100%;
-    align-items: center;
-  }
-
-  .headerPicture {
-    margin-right: 0%;
-    width: 80%;
-    height: calc(100vh - 400px);
-  }
-
   .headerSite {
     display: none;
   }
@@ -323,14 +317,7 @@ h2 {
 }
 
 @media all and (max-width: 1000px) {
-  .headerText {
-    font-size: 15px;
-  }
 
-  .headerPartFrame {
-    min-width: 300px;
-    height: 120px;
-  }
 }
 
 @media all and (max-width: 420px) {
@@ -349,7 +336,6 @@ h2 {
   width: 100%;
   padding: 5vh 20%;
   overflow: hidden;
-  /* background-color: rgb(5,5,5, 0.7); */
 }
 
 .contentSite {
@@ -371,15 +357,13 @@ h2 {
 }
 
 .withBackgroundColor {
-  /*background: rgb(25,10,8,0.8);*/
+  background: #70A9A1;
 }
 
 .pictures {
-  flex-direction: row;
+  display: flex;
   flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-around;
-  height: max-content;
+  max-width: 1000px;
 }
 
 .bannerAboutMe {
@@ -416,22 +400,30 @@ h2 {
   width: 100%;
 }
 
+.picture1,
+.picture2,
+.picture3,
+.picture4 {
+  height: 15vw;
+  width: 26.6vw;
+  max-width: 490px;
+  max-height: 280px;
+}
+
 .picture1 {
-  background-image: url(../graphics/aboutMePicture.jpg);
-  height: 300px;
-  width: 48%;
+  background-image: url(../graphics/picture1.jpg);
 }
 
 .picture2 {
-  background-image: url(../graphics/Friseur.jpg);
-  height: 300px;
-  width: 48%;
+  background-image: url(../graphics/picture2.jpg);
 }
 
 .picture3 {
-  background-image: url(../graphics/FriseurGeraete.jpg);
-  height: 300px;
-  width: 48%;
+  background-image: url(../graphics/picture3.jpg);
+}
+
+.picture4 {
+  background-image: url(../graphics/picture4.jpg);
 }
 
 .contact {
@@ -472,9 +464,9 @@ h2 {
 .name,
 .subject,
 .submit {
-  background-color: rgba(0,0,0,0);
+  background-color: white;
   padding: 5px 10px;
-  border: 2px solid #70A9A1;
+  border: 2px solid white;
   border-radius: 5px;
   font-family: 'Yanone Kaffeesatz';
   font-size: 20px;
@@ -500,14 +492,15 @@ h2 {
   height: 45px;
   float: right;
   margin: 10px 0px;
-  color: #70A9A1;
-  border: 2px solid #70A9A1;
+  color: black;
+  border: 2px solid white;
   border-radius: 45px;
 }
 
 .submit:hover {
   background: #70A9A1;
   color: #050505;
+  border-color: white;
 }
 
 .returnMsg {
@@ -564,11 +557,7 @@ h2 {
 
 @media all and (max-width: 880px) {
   #aboutMeText,
-  #pricesText,
-  #bearText,
-  #aboutMePicture,
-  #pricesPicture,
-  #bearPicture {
+  #pricesText {
     width: 100%;
   }
 

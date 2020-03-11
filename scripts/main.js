@@ -53,13 +53,3 @@ window.onclick = function(event) {
     }
   }
 };
-
-window.onscroll = function() {
-  var scrollPos = window.pageYOffset;
-  var navbar = document.getElementById('navbar');
-  if (scrollPos >= 20) {
-    navbar.style.backgroundColor = "rgb(5,5,5, 0.7)"
-  } else {
-    navbar.style.backgroundColor = ""
-  }
-};

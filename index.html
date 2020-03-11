@@ -24,13 +24,6 @@
   <body>
     <div id="start"></div>
 
-    <div class="frame sticky" id="navbarSide">
-      <a class="linkTo button" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
-      <a class="linkTo button" href="#prices" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
-      <a class="linkTo button" href="#contact" onfocus="this.blur()">KONTAKT</a>
-      <a class="start button" href="#start" onfocus="this.blur()">START</a>
-    </div>
-
     <div class="frame sticky" id="navbar">
       <a class="linkTo button" href="#aboutMe" onfocus="this.blur()">ÜBER MICH</a>
       <a class="linkTo button" href="#prices" onfocus="this.blur()">PREISE & LEISTUNGEN</a>
@@ -47,32 +40,29 @@
       </div>
     </div>
 
-    <div class="headerPictureFrame">
-      <div class="headerPicture picture"></div>
-      <div class="header">
-        <div class="headerPartFrame">
-          <div class="headerText">
-            <p class="footerTextColor">
-              Michaela Lachenmaier<br />
-              Nordstraße 9<br />
-              76437 Ottersdorf<br />
-              Tel.: 01520/2949088
-            </p>
-          </div>
-        </div>
-        <div class="headerPartFrame">
-          <div class="headerText">
-            <p class="footerTextColor">
-              Öffnungszeiten<br />
-              Di-Fr: 10-12Uhr & 13-17Uhr <br />
-              Sa: 10-12Uhr & 13-15Uhr<br />
-            </p>
-          </div>
-        </div>
+    <header>
+      <div class="overlay"></div>
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+      </video>
+      <div class="headerContent">
+        <div class="headerPicture picture"></div>
+        <h1 class="whiteCenterText">Friseur</h1>
+        <h3 class="whiteCenterText">Michaela Lachenmaier</h3>
       </div>
+    </header>
+
+    <div class="content wrap withBackgroundColor">
+      <p class="whiteCenterText">
+        Michaela Lachenmaier<br />
+        Nordstraße 9<br />
+        76437 Ottersdorf<br />
+        Tel.: 01520/2949088<br />
+        Termine/Öffnungszeiten nach Absprache per Telefon oder WhatsApp
+      </p>
     </div>
 
-    <div class="content wrap withBackgroundColor" id="aboutMe">
+    <div class="content wrap" id="aboutMe">
       <div class="bannerAboutMe picture"></div>
       <div class="contentText aboutMeText">
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
@@ -84,10 +74,13 @@
       </div>
     </div>
 
-    <div class="content pictures">
-      <div class="contentPicture picture picture1"></div>
-      <div class="contentPicture picture picture2"></div>
-      <div class="contentPicture picture picture3"></div>
+    <div class="content wrap withBackgroundColor">
+      <div class="pictures">
+        <div class="contentPicture picture picture1"></div>
+        <div class="contentPicture picture picture2"></div>
+        <div class="contentPicture picture picture3"></div>
+        <div class="contentPicture picture picture4"></div>
+      </div>
     </div>
 
     <div class="content wrap" id="prices">
@@ -112,7 +105,7 @@
       </div>
     </div>
 
-    <div class="content wrap" id="contact">
+    <div class="content wrap withBackgroundColor" id="contact">
       <form class="contact" method="post" action="scripts/contact.php">
         <div class="frameRowMulti">
           <div class="nameFrame frameColumnMulti">
