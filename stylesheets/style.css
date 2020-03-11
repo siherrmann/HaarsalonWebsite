@@ -70,12 +70,18 @@ h2 {
 .frameRowMulti {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
 }
 
 .frameColumnMulti {
   display: flex;
   flex-flow: column wrap;
+}
+
+.justifyContentSpaceBetween {
+  justify-content: space-between;
+}
+
+.justifyContentSpaceAround {
   justify-content: space-around;
 }
 
