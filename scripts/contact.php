@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if (strlen($lastname)>0) {
     http_response_code(403); #403=forbidden
-    echo "There was a problem with your submission, please try again.";
+    echo "Es gab ein internes Problem, bitte versuchen Sie es erneut.";
     exit;
   } else {
     $name = $_POST['name'];
@@ -15,39 +15,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (strpos($email, '@') == false) {
       http_response_code(403); #403=forbidden
-      echo "You have to put in a valid eamil address.";
+      echo "Sie müssen eine gültige Email-Adresse eingeben.";
       exit;
     }
     if (strlen($message)<10) {
       http_response_code(403); #403=forbidden
-      echo "Do you really want to send me such a short message?";
+      echo "Bitte schreiben Sie eine etwas längere Nachricht.";
       exit;
     }
 
-    $mail_to = "contact@erikbent.de";
+    $mail_to = "kontakt@friseur-mila.de";
 
     $success = mail($mail_to, "$subject - Nachricht von $name", $message, "From: $email");
     if ($success) {
         http_response_code(200); #200=okay
-        echo "Thank you for contacting us, $name. We will try to reply within 24 hours.";
+        echo "Danke für Ihre Kontaktaufnahme, $name. Ich werde mich so schnell wie möglich bei Ihnen melden.";
     } else {
         http_response_code(500); #500=internal server error
-        echo "We are sorry but the email did not go through.";
+        echo "Es tut mir leid, aber Ihre Email wurde leider nicht gesendet.";
         exit;
     }
 
-    $subjectResponse = 'Your message to Erik Bent';
-    $messageResponse = 'Thank you for your message, we will get back to you as soon as possible.';
+    $subjectResponse = 'Ihre Nachricht an Michaela Lachenmaier';
+    $messageResponse = 'Danke für Ihre Nachricht, ich werde mich so schnell wie möglich bei Ihnen melden.';
     // für HTML-E-Mails muss der 'Content-type'-Header gesetzt werden
     $headerResponse[] = 'MIME-Version: 1.0';
     $headerResponse[] = 'Content-type: text/plain; charset=utf-8';
     $headerResponse[] = 'To: $email';
-    $headerResponse[] = 'From: Simon <contact@erikbent.de>';
+    $headerResponse[] = 'From: Michaela Lachenmaier <kontakt@friseur-mila.de>';
 
     mail($email, $subjectResponse, $messageResponse, implode("\r\n", $headerResponse));
   }
 } else {
   http_response_code(403); #403=forbidden
-  echo "There was a problem with your submission, please try again.";
+  echo "Es gab ein internes Problem, bitte versuchen Sie es erneut.";
 }
 ?>
