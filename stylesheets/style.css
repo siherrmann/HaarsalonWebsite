@@ -242,13 +242,25 @@ header {
   overflow: hidden;
 }
 
-header video {
+/* header video {
   position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
   transform: translateX(-50%) translateY(-50%);
+} */
+
+.headerBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: url(../graphics/picture1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header .headerContent {
@@ -271,46 +283,22 @@ header .overlay {
   z-index: 1;
 }
 
-.headerPicture {
+.headerLogo {
   height: 20vh;
   background-image: url(../graphics/LogoSimple.svg);
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 80%;
-  height: 20vh;
-  margin-right: 25%;
-  margin-left: 5%;
+.headerTitle {
+  font-size: 50px;
 }
 
-.headerPartFrame {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  min-width: 400px;
-  height: 150px;
-  border: 2px solid #f6d8ae;
-}
-
-.whiteCenterText {
-  text-align: center;
-  color: white;
+.headerText {
+  font-size: 30px;
 }
 
 @media all and (max-width: 1300px) {
   .headerSite {
     display: none;
-  }
-
-  .header {
-    margin: auto;
-    height: 20vh;
-    margin: 0%;
-    align-items: center;
-    justify-content: center;
   }
 }
 
@@ -339,6 +327,11 @@ header .overlay {
 
 .wrapReverse {
   flex-flow: row wrap-reverse;
+}
+
+.whiteCenterText {
+  text-align: center;
+  color: white;
 }
 
 .withBackgroundColor {
