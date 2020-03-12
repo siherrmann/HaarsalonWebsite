@@ -1,6 +1,6 @@
 {
-    "name": "Erik Bent",
-    "short_name": "Erik Bent",
+    "name": "Friseur-Mila",
+    "short_name": "Friseur-Mila",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#124559",
-    "background_color": "#124559",
+    "theme_color": "#70a9a1",
+    "background_color": "#70a9a1",
     "display": "standalone"
 }
