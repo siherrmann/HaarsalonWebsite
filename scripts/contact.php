@@ -24,9 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
     }
 
-    $mail_to = "kontakt@friseur-mila.de";
+    $mail_to = "kontakt@friseurmila.de";
 
-    $success = mail($mail_to, "$subject - Nachricht von $name", $message, "From: $email");
+    $headerResponse[] = 'MIME-Version: 1.0';
+    $headerResponse[] = 'Content-type: text/plain; charset=utf-8';
+    $headerResponse[] = 'To: $mail_to';
+    $headerResponse[] = 'From: $email';
+
+    $success = mail($mail_to, "$subject - Nachricht von $name", $message, "From: $email", implode("\r\n", $headerResponse));
     if ($success) {
         http_response_code(200); #200=okay
         echo "Danke für Ihre Kontaktaufnahme, $name. Ich werde mich so schnell wie möglich bei Ihnen melden.";
@@ -42,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headerResponse[] = 'MIME-Version: 1.0';
     $headerResponse[] = 'Content-type: text/plain; charset=utf-8';
     $headerResponse[] = 'To: $email';
-    $headerResponse[] = 'From: Michaela Lachenmaier <kontakt@friseur-mila.de>';
+    $headerResponse[] = 'From: Michaela Lachenmaier <kontakt@friseurmila.de>';
 
     mail($email, $subjectResponse, $messageResponse, implode("\r\n", $headerResponse));
   }
