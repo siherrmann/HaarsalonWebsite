@@ -24,14 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
     }
 
-    $mail_to = "kontakt@friseurmila.de";
+    $mail_to = "kontakt@friseurmila.de"; 
 
-    $headerResponse[] = 'MIME-Version: 1.0';
-    $headerResponse[] = 'Content-type: text/plain; charset=utf-8';
-    $headerResponse[] = 'To: $mail_to';
-    $headerResponse[] = 'From: $email';
+    $headerResponse_to[] = 'MIME-Version: 1.0';
+    $headerResponse_to[] = 'Content-type: text/plain; charset=utf-8';
+	  $headerResponse[] = 'From: '.$name.' '.$email."\r\n" .
 
-    $success = mail($mail_to, "$subject - Nachricht von $name", $message, "From: $email", implode("\r\n", $headerResponse));
+    $success = mail($mail_to, "$subject - Nachricht von $name", "$message", implode("\r\n", $headerResponse_to));
     if ($success) {
         http_response_code(200); #200=okay
         echo "Danke für Ihre Kontaktaufnahme, $name. Ich werde mich so schnell wie möglich bei Ihnen melden.";
@@ -42,11 +41,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $subjectResponse = 'Ihre Nachricht an Michaela Lachenmaier';
-    $messageResponse = 'Danke für Ihre Nachricht, ich werde mich so schnell wie möglich bei Ihnen melden.';
-    // für HTML-E-Mails muss der 'Content-type'-Header gesetzt werden
+    $messageResponse = '
+		<html>
+		<head>
+			<title>Ihre Nachricht an Michaela Lachenmaier</title>
+		</head>
+		<body>
+		  <p>Vielen Dank für Ihre Nachricht, ich werde mich schnellstmöglich bei Ihnen melden.</p>
+		  <p>Mit freundlichen Grüßen,<br/>Michaela Lachenmaier</p>
+		</body>
+		</html>';
     $headerResponse[] = 'MIME-Version: 1.0';
-    $headerResponse[] = 'Content-type: text/plain; charset=utf-8';
-    $headerResponse[] = 'To: $email';
+    $headerResponse[] = 'Content-type: text/html; charset=utf-8';
     $headerResponse[] = 'From: Michaela Lachenmaier <kontakt@friseurmila.de>';
 
     mail($email, $subjectResponse, $messageResponse, implode("\r\n", $headerResponse));
