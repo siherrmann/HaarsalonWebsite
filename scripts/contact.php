@@ -24,13 +24,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       exit;
     }
 
-    $mail_to = "kontakt@friseurmila.de"; 
+    $mail_to = "kontakt@friseurmila.de, $email";
+	  $messageResponse_to = '
+  		<html>
+  		<head>
+  			<title>Ihre Nachricht an Michaela Lachenmaier</title>
+  		</head>
+  		<body>
+  		  <p>Vielen Dank für Ihre Nachricht, ich werde mich schnellstmöglich bei Ihnen melden.</p>
+  		  <p>Ihre Nachricht an Michaela Lachenmaier: '.$message.'</p>
+  		  <p>Mit freundlichen Grüßen,<br/>Michaela Lachenmaier</p>
+  		</body>
+  		</html>';
 
     $headerResponse_to[] = 'MIME-Version: 1.0';
-    $headerResponse_to[] = 'Content-type: text/plain; charset=utf-8';
-	  $headerResponse[] = 'From: '.$name.' '.$email."\r\n" .
+    $headerResponse_to[] = 'Content-type: text/html; charset=utf-8';
+	  $headerResponse_to[] = 'From: Michaela Lachenmaier <kontakt@friseurmila.de>';
 
-    $success = mail($mail_to, "$subject - Nachricht von $name", "$message", implode("\r\n", $headerResponse_to));
+    $success = mail($mail_to, "$subject - Nachricht von $name", "$messageResponse_to", implode("\r\n", $headerResponse_to));
     if ($success) {
         http_response_code(200); #200=okay
         echo "Danke für Ihre Kontaktaufnahme, $name. Ich werde mich so schnell wie möglich bei Ihnen melden.";
@@ -39,23 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Es tut mir leid, aber Ihre Email wurde leider nicht gesendet.";
         exit;
     }
-
-    $subjectResponse = 'Ihre Nachricht an Michaela Lachenmaier';
-    $messageResponse = '
-		<html>
-		<head>
-			<title>Ihre Nachricht an Michaela Lachenmaier</title>
-		</head>
-		<body>
-		  <p>Vielen Dank für Ihre Nachricht, ich werde mich schnellstmöglich bei Ihnen melden.</p>
-		  <p>Mit freundlichen Grüßen,<br/>Michaela Lachenmaier</p>
-		</body>
-		</html>';
-    $headerResponse[] = 'MIME-Version: 1.0';
-    $headerResponse[] = 'Content-type: text/html; charset=utf-8';
-    $headerResponse[] = 'From: Michaela Lachenmaier <kontakt@friseurmila.de>';
-
-    mail($email, $subjectResponse, $messageResponse, implode("\r\n", $headerResponse));
   }
 } else {
   http_response_code(403); #403=forbidden
