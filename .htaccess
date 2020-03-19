@@ -17,6 +17,7 @@ AddType image/svg+xml svg svgz
 	ExpiresByType image/ico "access plus 1 years"
 	ExpiresByType image/icon "access plus 1 years"
 	ExpiresByType image/x-icon "access plus 1 years"
+	ExpiresByType video/mp4 "access plus 1 years"
 	ExpiresByType video/x-flv "access plus 1 years"
 	ExpiresByType video/quicktime "access plus 1 years"
 	ExpiresByType application/x-shockwave-flash "access plus 1 years"
