@@ -242,16 +242,16 @@ header {
   overflow: hidden;
 }
 
-/* header video {
+header video {
   position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
   transform: translateX(-50%) translateY(-50%);
-} */
+}
 
-.headerBackground {
+/* .headerBackground {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -261,7 +261,7 @@ header {
   background-image: url(../graphics/picture1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 header .headerContent {
   display: flex;
@@ -279,7 +279,7 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0, 0.3);
   z-index: 1;
 }
 
